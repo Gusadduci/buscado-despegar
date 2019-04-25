@@ -8,12 +8,13 @@
 
 body{
     background: black;
+    position: relative;
 
 }
 
 .formulario {
     width: 850px;
-    height: 120px;
+    height: 100px;
     background: white;
     border-radius: 6px;
     margin: auto;
@@ -24,8 +25,8 @@ body{
     margin: auto;
 }
 
-.formulario input{
-    margin-top: 40px;
+.input-text{
+    margin-top: 5px;
     margin-left: 20px;
     border-radius: 5px;
     border-color: #CCC;
@@ -60,6 +61,136 @@ body{
     margin-top: 30px;
 }
 
-.error {
-    border-color: red;
+.error{
+    margin-top: 5px;
+    margin-left: 20px;
+    border-radius: 5px;
+    border-color: #fa503f;
+    border-style: solid;
+    padding: 5px;
+    border-width: 1px;
+    color: #444;
+    background-color: white;
+}
+
+.cartel-error1{
+    padding: 4px;
+    height: 28px;
+    width: 130px;
+    background: #fa503f;
+    position: absolute;
+    margin-top: -80px;
+    margin-left: 230px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+.tri1 {
+    width: 10px;
+    height: 10px;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-top: 8px solid #fa503f;;
+    margin-top: -53px;
+    margin-left: 330px;
+    position: absolute;
+    
+}
+.cartel-error2{
+    padding: 4px;
+    height: 28px;
+    width: 130px;
+    background: #fa503f;
+    position: absolute;
+    margin-top: -80px;
+    margin-left: 430px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+.tri2 {
+    width: 10px;
+    height: 10px;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-top: 8px solid #fa503f;;
+    margin-top: -53px;
+    margin-left: 530px;
+    position: absolute;
+    
+}
+
+.cartel-error3{
+    padding: 4px;
+    height: 65px;
+    width: 100px;
+    background: #fa503f;
+    position: absolute;
+    margin-top: -117px;
+    margin-left: 630px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+.tri3 {
+    width: 10px;
+    height: 10px;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-top: 8px solid #fa503f;;
+    margin-top: -53px;
+    margin-left: 700px;
+    position: absolute;
+    
+}
+.cartel-error4{
+    padding: 4px;
+    height: 65px;
+    width: 100px;
+    background: #fa503f;
+    position: absolute;
+    margin-top: -117px;
+    margin-left: 808px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+.tri4 {
+    width: 10px;
+    height: 10px;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-top: 8px solid #fa503f;;
+    margin-top: -53px;
+    margin-left: 880px;
+    position: absolute;
+    
+}
+
+
+
+
+
+.lugares{
+    display: flex;
+
+}
+
+.lugares div{
+    margin-top: 20px;
+    font: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.par{
+    margin-left: 22px;
+}
+.des { 
+    margin-left: 146px;
+}
+.sal {
+    margin-left: 145px;
+}
+
+.lle { 
+    margin-left: 130px;
 }

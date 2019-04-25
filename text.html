@@ -9,15 +9,25 @@
 </head>
 <body>
 <div class="formulario" id="formulario">
-    <input type="text" placeholder="Partida:" id="partida">
-    <input type="text" placeholder="Destino:" id="destino">
-    <input type="date"  id="salida">
-    <input type="date"  id="vuelta">
+    <div class="lugares">
+        <div class="par">Origen</div>
+        <div class="des">Destino</div>
+        <div class="sal">Salida</div>
+        <div class="lle">Llegada</div>
+    </div>
+    <input type="text" placeholder="Origen en iata:" id="partida" class="input-text">
+    <input type="text" placeholder="Destino en iata:" id="destino" class="input-text">
+    <input type="date"  id="salida" class="input-text">
+    <input type="date"  id="vuelta" class="input-text">
     <button id="buscar">Buscar</button>
 </div>
-    <div class="resultados" id="resultados">
-        
-    </div>
+    <div class="resultados" id="resultados"></div>
+    <div  id="cartel1"></div>
+    <div  id="cartel2"></div>
+    <div  id="cartel3"></div>
+    <div  id="cartel4"></div>
+
+
 
     <script src="info.js"></script>
 </body>

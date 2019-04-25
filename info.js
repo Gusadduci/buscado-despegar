@@ -40,57 +40,66 @@
 
                     var er1 = new RegExp('[0123456789]')
                     var rta1 = er1.test(partida)
-                    
+                    var rta2 = er1.test(destino)
+
                     if (rta1 == true){
                         contador = contador + 1;
-                    }else {contador = contador;
-                        document.getElementById('salida').className += 'error';}
-
-                    var rta2 = er1.test(destino)
-                
+                        partidaP.className = 'error';
+                        cartelMod1 = '<div class="cartel-error1">Ingrese letras.</div><div class="tri1"></div>';
+                        }
+                    else if (partida.length == 3 ){
+                        contador = contador;
+                        partidaP.className = 'input-text';
+                        cartelMod1 = '';
+                        }else {contador = contador + 1;
+                        partidaP.className = 'error'
+                        cartelMod1 = '<div class="cartel-error1">Ingrese origen.</div><div class="tri1"></div>';
+                        }
 
                     if (rta2 == true){
                         contador = contador + 1;
-                    }else {contador = contador;
-                        document.getElementById('salida').className += 'error';}
+                        destinoP.className = 'error'
+                        cartelMod2 = '<div class="cartel-error2">Ingrese letras.</div><div class="tri2"></div>';;
+                    }else if (destino.length == 3 ){
+                        contador = contador;
+                        destinoP.className = 'input-text';
+                        cartelMod2 = '';
+                        }else {contador = contador + 1;
+                        destinoP.className = 'error';
+                        cartelMod2 = '<div class="cartel-error2">Ingrese destino.</div><div class="tri2"></div>';}
 
                 }
       
-                var tres = function(){
-        
-                    if (partida.length == 3 ){
-                        {contador = contador;}
-                        
-                    }else {contador = contador + 1;
-                        document.getElementById('salida').className = 'error';}
-
-                    if (destino.length == 3 ){
-                        {contador = contador;}
-                        
-                    }else {contador = contador + 1;
-                        document.getElementById('salida').className = 'error';}
-                }
+                
 
                 var verFecha = function(){
         
                     if (salida <= fecha){
-                        {contador = contador;}
-                        
+                        contador = contador;
+                        fS.className = 'input-text';
+                        cartelMod3 = '';
                     }else {contador = contador + 1;
-                           document.getElementById('salida').className = 'error'; }
+                           fS.className = 'error'; 
+                           cartelMod3 = '<div class="cartel-error3">Ingrese una fecha de salida.</div><div class="tri3"></div>';}
 
                     if (vuelta <= fecha){
-                        {contador = contador;}
-                        
+                        contador = contador;
+                        fV.className = 'input-text';
+                        cartelMod4 = '';
                     }else {contador = contador + 1;
-                        document.getElementById('vuelta').className = 'error';}
+                        fV.className = 'error';
+                        cartelMod4 = '<div class="cartel-error4">Ingrese una fecha de llegada.</div><div class="tri4"></div>';}
 
                     if (vuelta <= salida){
-                        {contador = contador;}
+                        contador = contador;
+                        fS.className = 'input-text';
+                        fV.className = 'input-text';
+                        cartelMod4 = '';
                         
                     }else {contador = contador + 1;
-                        document.getElementById('vuelta').className = 'error';
-                        document.getElementById('salida').className = 'error';}
+                        fS.className = 'error';
+                        fV.className = 'error';
+                        cartelMod4 = '<div class="cartel-error4">Deve ser menor a salida.</div><div class="tri4"></div>';}
                 }
         
                 
@@ -101,12 +110,24 @@
 
                 var resultados = document.getElementById('resultados');
                 var result = ' ';
-
-                tiene_numeros()
-                tres()
-                verFecha()
+               
+                var cartel1 = document.getElementById('cartel1')
+                var cartel2 = document.getElementById('cartel2')
+                var cartel3 = document.getElementById('cartel3')
+                var cartel4 = document.getElementById('cartel4')
+                var cartelMod1 = '';
+                var cartelMod2 = '';
+                var cartelMod3 = '';
+                var cartelMod4 = '';
                 
+                tiene_numeros();
+                verFecha();
+           
                 
+                cartel1.innerHTML = cartelMod1
+                cartel2.innerHTML = cartelMod2
+                cartel3.innerHTML = cartelMod3
+                cartel4.innerHTML = cartelMod4
 
                 if (contador == 0){
                     result = '<div class="texto">' + ' Tu lugar de partida es en '+ partida + ' el dia ' + fS.value  + ' vas hasta ' + destino + ' y vuelves el ' + fV.value +  '</div>';
@@ -114,6 +135,9 @@
 
                 }else{
                     contador = 0;
+                    cero();
+                    
+                    
                 }
                 
                 
